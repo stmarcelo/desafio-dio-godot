@@ -1,0 +1,11 @@
+res://itens/gold.tscn
+res://itens/gold.gd
+res://game_manager.gd
+res://itens/meat.tscn
+res://player/player.gd
+res://ui/game_ui.gd
+res://enemies/sheep.tscn
+res://enemies/pawn.tscn
+res://enemies/goblin.tscn
+res://main.tscn
+res://player/player.tscn

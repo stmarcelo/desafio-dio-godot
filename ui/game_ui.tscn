@@ -1,0 +1,106 @@
+[gd_scene load_steps=9 format=3 uid="uid://bgg6fqth1xtuu"]
+
+[ext_resource type="Script" path="res://ui/game_ui.gd" id="1_xab86"]
+[ext_resource type="Texture2D" uid="uid://cjvrfnkk8wdui" path="res://addons/Tiny Swords/UI/Banners/Banner_Horizontal.png" id="2_i0km7"]
+[ext_resource type="Texture2D" uid="uid://bks1jgr7pt2gb" path="res://addons/Tiny Swords/Resources/Resources/M_Idle_(NoShadow).png" id="3_7qwwn"]
+[ext_resource type="Texture2D" uid="uid://5mtfxix1f6ks" path="res://addons/Tiny Swords/Resources/Resources/G_Idle_(NoShadow).png" id="4_twuph"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6abie"]
+texture = ExtResource("2_i0km7")
+texture_margin_left = 32.0
+texture_margin_top = 16.0
+texture_margin_right = 32.0
+texture_margin_bottom = 48.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+region_rect = Rect2(32, 48, 128, 128)
+
+[sub_resource type="LabelSettings" id="LabelSettings_q72fs"]
+font_size = 19
+font_color = Color(0.0295066, 0.0295066, 0.0295066, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipyso"]
+atlas = ExtResource("3_7qwwn")
+region = Rect2(40, 56, 56, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdp2v"]
+atlas = ExtResource("4_twuph")
+region = Rect2(40, 48, 56, 48)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_xab86")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -47.0
+offset_right = 47.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "1:00"
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -389.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 85.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_6abie")
+
+[node name="MeatLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 78.0
+offset_top = -30.5
+offset_right = 188.0
+offset_bottom = -3.5
+grow_vertical = 2
+scale = Vector2(0.990973, 1)
+text = "50"
+label_settings = SubResource("LabelSettings_q72fs")
+vertical_alignment = 1
+
+[node name="GoldLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -143.0
+offset_top = -29.5
+offset_right = -23.0
+offset_bottom = -2.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "1.000"
+label_settings = SubResource("LabelSettings_q72fs")
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 5.0
+offset_right = 90.0
+offset_bottom = 45.0
+scale = Vector2(0.7, 0.7)
+texture = SubResource("AtlasTexture_ipyso")
+
+[node name="TextureRect2" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 1.0
+offset_right = 251.0
+offset_bottom = 49.0
+scale = Vector2(0.7, 0.7)
+texture = SubResource("AtlasTexture_tdp2v")

@@ -1,0 +1,94 @@
+[gd_scene load_steps=3 format=3 uid="uid://cklxwlylnrrub"]
+
+[ext_resource type="Texture2D" uid="uid://dgict54j6b3l3" path="res://addons/Tiny Swords/Factions/Knights/Troops/Warrior/Purple/Warrior_Purple.png" id="1_1ivfi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ms1kl"]
+line_spacing = 25.0
+
+[node name="Test layer" type="Node2D"]
+
+[node name="WarriorPurple" type="Sprite2D" parent="."]
+position = Vector2(1883, 857)
+texture = ExtResource("1_1ivfi")
+
+[node name="Label9" type="Label" parent="WarriorPurple"]
+offset_left = -512.0
+offset_top = -840.0
+offset_right = -182.0
+offset_bottom = -817.0
+scale = Vector2(3, 3)
+text = "0             1              2             3             4             5"
+
+[node name="Label11" type="Label" parent="WarriorPurple"]
+offset_left = -586.0
+offset_top = -732.0
+offset_right = -573.0
+offset_bottom = -373.0
+scale = Vector2(4, 4)
+text = "0 1 2 3 4 5 6 7"
+label_settings = SubResource("LabelSettings_ms1kl")
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="WarriorPurple"]
+offset_left = 557.0
+offset_top = -708.0
+offset_right = 586.0
+offset_bottom = -685.0
+scale = Vector2(3, 3)
+text = "idle"
+
+[node name="Label2" type="Label" parent="WarriorPurple"]
+offset_left = 565.0
+offset_top = -519.0
+offset_right = 594.0
+offset_bottom = -496.0
+scale = Vector2(3, 3)
+text = "run"
+
+[node name="Label3" type="Label" parent="WarriorPurple"]
+offset_left = 573.0
+offset_top = -336.0
+offset_right = 704.0
+offset_bottom = -313.0
+scale = Vector2(3, 3)
+text = "attack side down"
+
+[node name="Label4" type="Label" parent="WarriorPurple"]
+offset_left = 572.0
+offset_top = -153.0
+offset_right = 703.0
+offset_bottom = -130.0
+scale = Vector2(3, 3)
+text = "attack side up"
+
+[node name="Label5" type="Label" parent="WarriorPurple"]
+offset_left = 530.0
+offset_top = 42.0001
+offset_right = 667.0
+offset_bottom = 65.0001
+scale = Vector2(3, 3)
+text = "attack down right"
+
+[node name="Label6" type="Label" parent="WarriorPurple"]
+offset_left = 586.0
+offset_top = 249.0
+offset_right = 723.0
+offset_bottom = 272.0
+scale = Vector2(3, 3)
+text = "attack down left"
+
+[node name="Label8" type="Label" parent="WarriorPurple"]
+offset_left = 577.0
+offset_top = 435.0
+offset_right = 714.0
+offset_bottom = 458.0
+scale = Vector2(3, 3)
+text = "attack up right"
+
+[node name="Label7" type="Label" parent="WarriorPurple"]
+offset_left = 579.0
+offset_top = 630.0
+offset_right = 716.0
+offset_bottom = 653.0
+scale = Vector2(3, 3)
+text = "attack up left"

@@ -1,0 +1,77 @@
+[gd_scene load_steps=12 format=3 uid="uid://doyvvibkle2gn"]
+
+[ext_resource type="Texture2D" uid="uid://bjm33fkc62ii7" path="res://addons/Tiny Swords/Resources/Resources/G_Spawn.png" id="1_ccv2n"]
+[ext_resource type="Script" path="res://itens/gold.gd" id="2_tidyc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w270o"]
+atlas = ExtResource("1_ccv2n")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxu4t"]
+atlas = ExtResource("1_ccv2n")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxgdg"]
+atlas = ExtResource("1_ccv2n")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wp5pu"]
+atlas = ExtResource("1_ccv2n")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gio1y"]
+atlas = ExtResource("1_ccv2n")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gjpg"]
+atlas = ExtResource("1_ccv2n")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0io4"]
+atlas = ExtResource("1_ccv2n")
+region = Rect2(768, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_s8bh4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w270o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxu4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxgdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wp5pu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gio1y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gjpg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0io4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3nh3y"]
+
+[node name="Gold" type="AnimatedSprite2D"]
+position = Vector2(-3, -35)
+sprite_frames = SubResource("SpriteFrames_s8bh4")
+frame = 6
+frame_progress = 1.0
+script = ExtResource("2_tidyc")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(5, 9)
+scale = Vector2(2.88, 2.88)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_3nh3y")
